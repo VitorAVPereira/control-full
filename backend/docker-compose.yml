@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: db-full
+      POSTGRES_PASSWORD: fullvision-2021
+      POSTGRES_DB: servicos_tecnicos
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
